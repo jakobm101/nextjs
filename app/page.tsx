@@ -1,4 +1,12 @@
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function Home() {
   return (
@@ -12,6 +20,18 @@ export default function Home() {
           height={38}
           priority
         />
+        <div>
+          <Button>Click me</Button>
+          <Carousel className="p-5">
+            <CarouselContent className="p-15">
+              <CarouselItem className="w-10 h-70 bg-amber-300 rounded-2xl m-5 p-5 flex content-center justify-center font-extrabold text-2xl">1</CarouselItem>
+              <CarouselItem className="w-10 h-70 bg-red-300 rounded-2xl m-5 p-5 flex content-center justify-center font-extrabold text-2xl">1</CarouselItem>
+              <CarouselItem className="w-10 h-70 bg-blue-300 rounded-2xl m-5 p-5 flex content-center justify-center font-extrabold text-2xl">1</CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Jaki Update hahahah{" "}
